@@ -1,0 +1,41 @@
+<!Doctype html PUBLIC "//W3C//DTD XHTML 1.0 Transitional//EN">
+<head>
+	<title>Out and Up!</title>
+	<script>
+	colors = new Array("red","blue","green","black","purple","white","yellow")
+	colorNum = 0
+	function colourChange() {
+	if(colorNum==colors.length){
+	colorNum = 0
+	} else {
+	colorNum++
+	}
+	document.body.style.background = colors[colorNum]
+	setTimeout("colourChange()",1000)
+	}
+	</script>
+</head>
+<body background="Images/Forest repeating.jpg" height="100%">
+
+<div id="a" style="position: absolute; top:-500%; left:-4.25%; overflow:hidden"><a href="javascript:colourChange()"><img border="0" src="Images/Warning.jpg" width="10px"></img></div>
+<div id="a" style="position: absolute; top:-30%; left:50%; overflow:hidden"><a href="javascript:parent.location.href='http://www.google.co.uk'"><img border="0" src="Images/Google.png" width="50px"></img></div>
+<div id="fb" style="width:4%; position: absolute; top:1%; left:5px">
+<a href="https://en-gb.facebook.com">
+<img border="0" src="Images/Facebook.png" width="100%"></img>
+</a>
+</div>
+<div id="tw" style="width:4%; position: absolute; top:10%; left:5px;">
+<a href="https://twitter.com/">
+<img border="0" src="Images/twitter.gif" width="100%"></img>
+</a>
+</div>
+<div id="gp" style="width:4%; position: absolute; top:19%; left:5px;">
+<a href="https://plus.google.com/">
+<img border="0" src="Images/GooglePlus.png" width="100%"></img>
+</a>
+</div>
+<div id="mainDiv" style="-webkit-box-shadow:0 0 40px black;-moz-box-shadow: 0 0 40px black;box-shadow:0 0 40px black;border-radius: 15px;background-color: #EEEEEE; width:90%; height:98%; position: absolute; top=20px; left:5%">
+<iframe src="Main.htm" name="main" id="mainFrame"  scrolling="yes" width="100%" height="98%" frameborder="no" style="border-radius:15px"/>
+
+</div>
+</body>

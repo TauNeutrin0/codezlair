@@ -1,0 +1,63 @@
+<!Doctype html PUBLIC "//W3C//DTD XHTML 1.0 Transitional//EN">
+<head>
+	<title>Welcome!</title>
+	<script language="Javascript" type="text/javascript">
+		<!--
+		if(document.images) {
+			forwardArrowBlack = new Image
+			forwardArrowBlue = new Image
+			backArrowBlack = new Image
+			backArrowBlue = new Image
+			
+			forwardArrowBlack.src = "Images/ForwardArrow.png"
+			forwardArrowBlue.src = "Images/ForwardArrowHl.png"
+			backArrowBlack.src = "Images/BackArrow.png"
+			backArrowBlue.src = "Images/BackArrowHl.png"
+		}
+		else {
+			forwardArrowBlack = ""
+			forwardArrowBlue = ""
+			backArrowBlack = ""
+			backArrowBlue = ""
+			document.forwardArrow = ""
+			document.backArrow = ""
+		}
+		
+		myPics= new Array("Images/High Ropes Course.jpg","Images/Cafe.jpg")
+		thisPic = 0
+		imgCt = myPics.length - 1
+		
+		function changeImg(direction) {
+			if(document.images) {
+				thisPic = thisPic + direction
+				if(thisPic > imgCt) {
+					thisPic = 0
+				}
+				if (thisPic < 0) {
+					thisPic = imgCt
+				}
+				document.slideshow.src=myPics[thisPic]
+			}
+			document.getElementById('camWav').play();
+			document.getElementById('camMp').play();
+		}
+		-->
+	</script>
+
+</head>
+<body bgcolor="#EEEEEE">
+<div style="border-bottom-left-radius:30px 100px; border-top-left-radius:30px 100px;border-bottom-right-radius:30px 100px; border-top-right-radius:30px 100px; background-color: #D8D8D8; width:100%; height:207px; position: relative;">
+
+<div style="float:left;font-family:Arial;font-size:80px; line-height:200px;"><font style="font-family:Arial;">Gallery&nbsp&nbsp</font></div>
+<a onmouseover="document.backArrow.src=backArrowBlue.src" onmouseout="document.backArrow.src=backArrowBlack.src">
+<img src="Images/BackArrow.png" onclick="changeImg(-1)" width="30" height="207" border="0" name="backArrow" alt="&lt&lt  Back" /></a>
+
+<img src="Images/High Ropes Course.jpg" Height="207" width="383" name="slideshow" alt="Slideshow">
+
+<a onmouseover="document.forwardArrow.src=forwardArrowBlue.src" onmouseout="document.forwardArrow.src=forwardArrowBlack.src">
+<img src="Images/ForwardArrow.png" onclick="changeImg(1)" width="30" height="207" border="0" name="forwardArrow" alt="Forward  &gt&gt" /></a>
+</div>
+<audio id="camWav" src="Images/Camera.wav" preload="auto"></audio>
+<audio id="camMp" src="Images/Camera.mp3" preload="auto"></audio>
+
+</body>

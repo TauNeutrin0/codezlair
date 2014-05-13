@@ -1,0 +1,205 @@
+<!Doctype HTML>
+<head>
+	<script>
+		function validForm(passForm){
+			var value = passForm.forenameBox.value
+				if(value == "") {
+				alert("Please enter a Forename.")
+				return false
+			}
+
+			value = passForm.surnameBox.value
+			if(value == "") {
+				alert("Please enter a Surname.");
+				return false
+			}
+
+			//Check Age
+
+			value = passForm.ageBox.value
+			if(value == "" || value == "Please enter an age") {
+				alert("Please enter an Age.");
+				return false
+			}
+
+			//Check Email
+			
+			//AWESOME CODE vvvvv
+			re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+			//AWESOME CODE ^^^^^
+			
+			value = passForm.emailBox.value
+			if(re.test(value)) {
+				
+			}else{
+				alert("Please enter a valid e-mail address.");
+				return false
+				
+			}
+			return true
+		}
+	</script>
+</head>
+<body bgcolor="#EEEEEE" height="100%">
+<div style="width:100%;">
+<div style="width:80%; margin:0 auto;">
+<img src="Images/Bookings.gif" width="100%"></img>
+</div>
+</div>
+<form name="book" onsubmit="return validForm(this);location.href='Thanks.html'" action="mailto:daniel@causebrook.co.uk enctype='text/plain'">
+  <table width="200" border="0">
+    <tr>
+      <td>Forename</td>
+      <td><input name="forenameBox" type="text" value=""></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Surname</td>
+      <td><input name="surnameBox" type="text" value=""></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td><p>
+          <label>
+          <input type="radio" name="RadioGroup1" value="GenderMale">Male</label>
+          <br>
+          <label>
+          <input type="radio" name="RadioGroup1" value="GenderFemale">Female</label>
+          <br>
+      </p></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td><input name="ageBox" type="text" value="" /></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+	<tr>
+      <td>Course type</td>
+      <td>
+	  <select>
+      <option>Team Building</option>
+      <option>Assault Course</option>
+	  <option>High Ropes</option>
+      </select>
+	  </td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Number of people</td>
+      <td>
+	  <select>
+      <option>0-5</option>
+      <option>6-10</option>
+      <option>11-15</option>
+	  <option>16-20</option>
+	  <option>20+</option>
+      </select>
+	  </td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>E-mail</td>
+      <td><input name="emailBox" type="text" value="" size="30" /></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><input type="reset" name="Reset" value="Reset"></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><input type="submit"  name="SubmitButton" value="Submit"></td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</form>
+</body>
